@@ -1,0 +1,21 @@
+version: "3"
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - node
+  node:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    image: mongo:3.4
+    volumes:
+      - /usr/local/tempdb:/data/db
+    ports:
+      - "27017:27017"

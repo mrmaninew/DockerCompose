@@ -4,12 +4,15 @@
   "description": "Server setup environment ",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mongoose": "^5.2.14"
+    "mongoose": "^5.2.14",
+    "nodemon": "^1.18.4"
   }
 }
